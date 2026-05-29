@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Homoeopathy Speaks Website
 
-## Getting Started
+A professional Next.js website for Homoeopathy Speaks.
 
-First, run the development server:
+## Tech stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- lucide-react icons
+- Static article system
+- Booking placeholder ready for Cliniko, Halaxy, Acuity, Calendly or Wix Bookings
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Edit main website content
 
-## Learn More
+- Site config: `src/lib/siteConfig.ts`
+- Services/prices: `src/lib/services.ts`
+- Articles: `src/lib/articles.ts`
 
-To learn more about Next.js, take a look at the following resources:
+## Important pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Home: `src/app/page.tsx`
+- Autism/ADHD/GDD: `src/app/autism-adhd-gdd/page.tsx`
+- Medicines & Conditions: `src/app/medicines-conditions/page.tsx`
+- Booking: `src/app/book-appointment/page.tsx`
+- Patient Guide: `src/app/patient-guide/page.tsx`
+- Articles: `src/app/articles/page.tsx`
+- Contact: `src/app/contact/page.tsx`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Booking integration
 
-## Deploy on Vercel
+Add a live booking URL in `.env.local`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+NEXT_PUBLIC_BOOKING_URL=https://your-booking-url-here
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Recommended booking systems:
+
+- Cliniko
+- Halaxy
+- Acuity
+- Calendly
+- Wix Bookings
+
+## Before launch
+
+Confirm:
+
+- Domain: homoeopathyspeaks.com.au
+- Phone number
+- Clinic address
+- Consultation prices
+- Dr Kumar’s qualification wording
+- ARoH registration wording
+- Privacy policy
+- Health disclaimer
+- Booking/cancellation terms
+- Telehealth consent
+- Booking system
+- Newsletter system
+- Google Analytics
+- Google Search Console
+- Google Business Profile
+
+## Deployment
+
+Recommended deployment for this custom Next.js version:
+
+- Vercel
+- Domain purchased via VentraIP
+- Professional email through Google Workspace
