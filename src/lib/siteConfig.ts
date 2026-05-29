@@ -12,9 +12,9 @@ export const siteConfig = {
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "Autism, ADHD & GDD", href: "/autism-adhd-gdd" },
-  { label: "Medicines & Conditions", href: "/medicines-conditions" },
-  { label: "Book Appointment", href: "/book-appointment" },
-  { label: "Patient Guide", href: "/patient-guide" },
+  { label: "Medicines", href: "/medicines-conditions" },
+  { label: "Book", href: "/book-appointment" },
+  { label: "Guide", href: "/patient-guide" },
   { label: "Articles", href: "/articles" },
   { label: "Contact", href: "/contact" },
 ];
