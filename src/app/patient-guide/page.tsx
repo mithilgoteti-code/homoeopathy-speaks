@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 export const metadata: Metadata = {
   title: "Patient Guide",
   description:
-    "How to take homoeopathic medicines, what to avoid, storage instructions, minute medications and integrating homoeopathy with modern medicine.",
+    "Questions about homoeopathic preparations, product directions, storage and continuing appropriate medical care.",
 };
 
 const tips = [
@@ -24,8 +24,8 @@ const tips = [
   },
   {
     icon: Leaf,
-    title: "Avoid interference",
-    text: "Your practitioner may advise avoiding food, drink, coffee, toothpaste or strong flavours close to the dose.",
+    title: "Ask about instructions",
+    text: "Ask the practitioner or pharmacist about the supplied product’s ingredients and directions. Do not stop prescribed treatment or delay medical care.",
   },
   {
     icon: Stethoscope,
@@ -57,8 +57,9 @@ export default function PatientGuidePage() {
               <p className="mt-4 leading-8 text-teal-50/90">
                 Homoeopathic medicines are prepared through repeated dilution and succussion,
                 traditionally called potentisation. Homoeopathic practitioners believe this process
-                produces a remedy that acts gently and individually, although the mechanism and
-                clinical effectiveness remain debated in mainstream medical science.
+                is part of their traditional approach. This description does not establish that a
+                preparation is effective or safe. Do not assume that a product is harmless because
+                it is described as natural or diluted.
               </p>
             </div>
 

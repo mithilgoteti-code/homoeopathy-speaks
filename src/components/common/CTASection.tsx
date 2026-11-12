@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { bookingsReady } from "@/lib/bookingLinks";
 
 type CTASectionProps = {
   title?: string;
@@ -8,9 +9,9 @@ type CTASectionProps = {
 };
 
 export function CTASection({
-  title = "Ready to book a consultation?",
-  text = "Choose the appointment option that best matches your needs. The live website can connect this page to Cliniko, Halaxy, Acuity or another booking calendar.",
-  buttonText = "Book an Appointment",
+  title = bookingsReady ? "Ready to book a consultation?" : "Explore consultation options",
+  text = "Review consultation options and fees for Stirling and online appointments. Payment is collected after the consultation.",
+  buttonText = bookingsReady ? "Book an appointment" : "View consultations and fees",
   buttonHref = "/book-appointment",
 }: CTASectionProps) {
   return (

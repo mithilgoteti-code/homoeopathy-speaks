@@ -1,85 +1,36 @@
-# Homoeopathy Speaks Website
+# Homoeopathy Speaks website
 
-A professional Next.js website for Homoeopathy Speaks.
+Next.js static export served by the Cloudflare Worker configured in `wrangler.jsonc` (`./out`). This branch prepares changes for review only. Do not push or deploy without checking Cloudflare Git/build triggers and obtaining publication approval.
 
-## Tech stack
-
-- Next.js App Router
-- TypeScript
-- Tailwind CSS
-- lucide-react icons
-- Static article system
-- Booking placeholder ready for Cliniko, Halaxy, Acuity, Calendly or Wix Bookings
-
-## Run locally
+## Local review
 
 ```bash
-npm install
-npm run dev
+npm ci --ignore-scripts
+node --test tests/booking-safety.mjs
+npm run build:holding
+python3 -m http.server 3000 --directory out
 ```
 
-Open:
+Open `http://localhost:3000`. The holding release keeps booking links closed. The holding build includes TypeScript and export-safety checks. Production deployment is not part of these commands. Public information pages contain temporary notices; full policy drafts are preserved in `docs/policy-review/policyDrafts.json` and are not imported by public pages.
 
-```text
-http://localhost:3000
-```
+## Booking configuration
 
-## Edit main website content
+There are four existing fees, each with two existing appointment types. Edit display copy in `src/lib/services.ts`; never create matching duplicates in Halaxy. The homepage and booking page collect no patient data and make no local appointment confirmations.
 
-- Site config: `src/lib/siteConfig.ts`
-- Services/prices: `src/lib/services.ts`
-- Articles: `src/lib/articles.ts`
+The eight genuine practitioner-and-location appointment-type URLs from the 12 November booking-link addendum are preserved in `src/lib/halaxyBookingLinks.json`. Optional build-time variables can override each registered URL. Do not regenerate types, build URLs from IDs, use fee-only links for both modes, or substitute synthetic test URLs. See `docs/HOLDING_RELEASE.md` for this release and its approval requirements.
 
-## Important pages
+- Keep `HALAXY_BOOKINGS_APPROVED` unset or `false` until launch approval.
+- `src/lib/siteRelease.json` is fixed to `holding`. A mistaken `HALAXY_BOOKINGS_APPROVED=true` cannot override it. Future activation requires a separately reviewed source change to the phase, the explicit approval flag, eight valid URLs, a rebuild and release approval. It does not enable Halaxy bookings.
+- `src/lib/bookingLinks.ts` validates HTTPS and Halaxy hostnames and rejects root/profile/application/placeholder destinations. It cannot verify appointment selection. Staff must open each generated URL and test type, mode, length, total and no card/deposit request.
+- The old `NEXT_PUBLIC_BOOKING_URL` embed variable is no longer used.
+- Optional URL override names are defined in `src/lib/bookingLinks.ts`. Do not include patient names, emails or other patient information in URLs.
+- Static exports freeze configuration at build time. Rebuild after changes; deployment still needs separate approval.
+- External booking buttons are used instead of an iframe: Halaxy receives a visit when the patient follows the link, with clear destination and a fallback contact route. Do not embed a profile page.
 
-- Home: `src/app/page.tsx`
-- Autism/ADHD/GDD: `src/app/autism-adhd-gdd/page.tsx`
-- Medicines & Conditions: `src/app/medicines-conditions/page.tsx`
-- Booking: `src/app/book-appointment/page.tsx`
-- Patient Guide: `src/app/patient-guide/page.tsx`
-- Articles: `src/app/articles/page.tsx`
-- Contact: `src/app/contact/page.tsx`
+## Contacts and policies
 
-## Booking integration
+`src/lib/siteConfig.ts` centralises Mr Kumar Goteti, AROH-11-153, the address/phone verified in Halaxy and the practice-accessible Gmail address. It does not substitute the unverified domain mailbox. The holding notices explain that full policies are under review. Outstanding facts and publication controls are in `docs/HOLDING_RELEASE.md`; historical account-specific reports are kept separately from this release's public repository documentation.
 
-Add a live booking URL in `.env.local`:
+Cloudflare Web Analytics was observed on the live site despite not being present in this source. It may be injected through the Cloudflare dashboard; inspect the account before finalising disclosures. Public DNS routes domain mail to Microsoft 365/Exchange Online and SPF also references secureserver.net; mailbox monitoring/forwarding/delivery remain untested. No mail handler, newsletter provider or Google Analytics/Tag Manager integration was found in the reviewed source. Template suggestions are not installed services.
 
-```bash
-NEXT_PUBLIC_BOOKING_URL=https://your-booking-url-here
-```
-
-Recommended booking systems:
-
-- Cliniko
-- Halaxy
-- Acuity
-- Calendly
-- Wix Bookings
-
-## Before launch
-
-Confirm:
-
-- Domain: homoeopathyspeaks.com.au
-- Phone number
-- Clinic address
-- Consultation prices
-- Dr Kumar’s qualification wording
-- ARoH registration wording
-- Privacy policy
-- Health disclaimer
-- Booking/cancellation terms
-- Telehealth consent
-- Booking system
-- Newsletter system
-- Google Analytics
-- Google Search Console
-- Google Business Profile
-
-## Deployment
-
-Recommended deployment for this custom Next.js version:
-
-- Vercel
-- Domain purchased via VentraIP
-- Professional email through Google Workspace
+The retired `scripts/generate-site.mjs` now stops immediately so it cannot overwrite these changes with prototype forms or outdated copy. Edit `src/` directly.

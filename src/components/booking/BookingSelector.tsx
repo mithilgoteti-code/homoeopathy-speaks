@@ -1,134 +1,40 @@
-"use client";
-
+import Link from "next/link";
 import { services } from "@/lib/services";
-import { Calendar, ChevronRight } from "lucide-react";
-import { useState } from "react";
-
-const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-const times = ["9:00 AM", "10:30 AM", "12:00 PM", "2:00 PM", "4:00 PM", "6:00 PM"];
+import { bookingLinks, bookingsReady } from "@/lib/bookingLinks";
+import { siteConfig } from "@/lib/siteConfig";
 
 export function BookingSelector() {
-  const [selectedSlug, setSelectedSlug] = useState(services[0].slug);
-  const selected = services.find((service) => service.slug === selectedSlug) || services[0];
-  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL;
-
   return (
-    <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-      <div className="space-y-4">
+    <div>
+      {!bookingsReady && (
+        <div className="mb-8 rounded-3xl border border-teal-200 bg-teal-50 p-6" role="status">
+          <h2 className="text-xl font-semibold text-slate-950">Online bookings are not open yet</h2>
+          <p className="mt-3 leading-7 text-slate-700">For appointment enquiries, call <a href={siteConfig.phoneHref} className="font-semibold underline">{siteConfig.phone}</a>. An enquiry does not reserve a time; the practice will confirm any appointment separately.</p>
+        </div>
+      )}
+      <div className="grid gap-6 md:grid-cols-2">
         {services.map((service) => (
-          <button
-            key={service.slug}
-            onClick={() => setSelectedSlug(service.slug)}
-            className={
-              selectedSlug === service.slug
-                ? "w-full rounded-3xl border border-teal-700 bg-white p-5 text-left shadow-md transition"
-                : "w-full rounded-3xl border border-slate-200 bg-white/70 p-5 text-left transition hover:bg-white"
-            }
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <h3 className="font-semibold text-slate-950">{service.name}</h3>
-                <p className="mt-2 text-sm leading-7 text-slate-600">{service.description}</p>
+          <article key={service.slug} className="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-slate-200">
+            <h2 className="text-xl font-semibold text-slate-950">{service.name}</h2>
+            <p className="mt-3 leading-7 text-slate-600">{service.description}</p>
+            <p className="mt-4 font-semibold text-teal-900">{service.duration} · {service.price} AUD</p>
+            {bookingsReady ? (
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href={bookingLinks[service.inPersonKey]} target="_blank" rel="noopener noreferrer" className="rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white">Book in Stirling<span className="sr-only"> — {service.name} (opens Halaxy in a new tab)</span></a>
+                <a href={bookingLinks[service.onlineKey]} target="_blank" rel="noopener noreferrer" className="rounded-full border border-teal-700 px-5 py-3 text-sm font-semibold text-teal-900">Book online consultation<span className="sr-only"> — {service.name} (opens Halaxy in a new tab)</span></a>
               </div>
-              <ChevronRight className="mt-1 h-5 w-5 text-teal-700" />
-            </div>
-            <div className="mt-4 flex flex-wrap gap-3 text-sm text-slate-600">
-              <span className="rounded-full bg-teal-50 px-3 py-1 text-teal-800">{service.duration}</span>
-              <span className="rounded-full bg-amber-50 px-3 py-1 text-amber-800">{service.price}</span>
-            </div>
-          </button>
+            ) : <p className="mt-5 text-sm text-slate-600">Available in Stirling or by online consultation once bookings open.</p>}
+          </article>
         ))}
       </div>
-
-      <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-100">
-        <div className="flex flex-col justify-between gap-4 border-b border-slate-100 pb-6 md:flex-row md:items-center">
-          <div>
-            <h3 className="text-2xl font-semibold text-slate-950">Booking calendar</h3>
-            <p className="mt-2 text-slate-600">Selected: {selected.name}</p>
-          </div>
-          <div className="rounded-2xl bg-teal-50 px-4 py-3 text-sm font-semibold text-teal-800">
-            {bookingUrl ? "Live booking embed" : "Prototype calendar"}
-          </div>
-        </div>
-
-        {bookingUrl ? (
-          <div className="mt-6">
-            <iframe
-              src={bookingUrl}
-              title="Booking calendar"
-              className="h-[720px] w-full rounded-2xl border border-slate-200"
-            />
-            <a
-              href={bookingUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-4 inline-flex rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white hover:bg-teal-800"
-            >
-              Open Booking Calendar
-            </a>
-          </div>
-        ) : (
-          <>
-            <div className="mt-6 grid grid-cols-3 gap-3 md:grid-cols-6">
-              {days.map((day) => (
-                <div key={day} className="rounded-2xl bg-slate-50 p-4 text-center">
-                  <div className="text-sm font-semibold text-slate-950">{day}</div>
-                  <div className="mt-1 text-xs text-slate-500">Available</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-3">
-              {times.map((time) => (
-                <button
-                  key={time}
-                  className="rounded-2xl border border-slate-200 px-4 py-3 text-sm font-medium text-slate-700 hover:border-teal-700 hover:text-teal-800"
-                >
-                  {time}
-                </button>
-              ))}
-            </div>
-
-            <div className="mt-8 rounded-2xl bg-teal-50 p-5 text-sm leading-7 text-teal-950">
-              <div className="mb-2 flex items-center gap-2 font-semibold">
-                <Calendar className="h-5 w-5" />
-                Booking integration notice
-              </div>
-              This is a placeholder. The live website can embed Cliniko, Halaxy, Acuity, Calendly
-              or Wix Bookings. Recommended options for a health practice are Cliniko or Halaxy.
-            </div>
-          </>
-        )}
-
-        <form className="mt-8 grid gap-4">
-          <input className="rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-teal-600" placeholder="Full name" />
-          <input className="rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-teal-600" placeholder="Email" />
-          <input className="rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-teal-600" placeholder="Phone" />
-          <select className="rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-teal-600">
-            <option>Patient type</option>
-            <option>Adult</option>
-            <option>Child</option>
-            <option>Parent booking for child</option>
-          </select>
-          <select className="rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-teal-600">
-            <option>Preferred consultation mode</option>
-            <option>In-person</option>
-            <option>Telehealth</option>
-            <option>Phone</option>
-          </select>
-          <textarea className="min-h-28 rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-teal-600" placeholder="Brief appointment notes. Please do not include detailed medical history here." />
-          <label className="flex gap-3 text-xs leading-5 text-slate-600">
-            <input type="checkbox" className="mt-1" />
-            I understand this is not emergency medical care.
-          </label>
-          <label className="flex gap-3 text-xs leading-5 text-slate-600">
-            <input type="checkbox" className="mt-1" />
-            I consent to Homoeopathy Speaks collecting my information to respond to this booking request.
-          </label>
-          <button className="rounded-full bg-teal-700 px-6 py-4 font-semibold text-white transition hover:bg-teal-800">
-            Request Appointment
-          </button>
-        </form>
+      <div className="mt-8 rounded-3xl bg-white p-7 leading-8 text-slate-700">
+        <h2 className="text-xl font-semibold text-slate-950">Before you book</h2>
+        <p className="mt-3">Payment is collected only after your consultation. There is no booking deposit or compulsory card capture. Prescribed remedies are charged separately.</p>
+        <p>Intake forms are offered after booking. Paper forms are available at the clinic; contact the practice if you need another way to provide information. Document uploads are disabled.</p>
+        <p>For online consultations, check the date and time zone displayed in Halaxy. Your individual video joining instructions will be provided separately. Patients outside Australia should contact the practice before booking so suitability and local requirements can be checked.</p>
+        <p>Making a booking for a child or another person does not establish authority to consent or access their information. The practitioner will confirm appropriate arrangements.</p>
+        <p>Opening a booking page does not confirm an appointment. Rely on the confirmation issued by Halaxy or the practice.</p>
+        <p className="mt-3"><Link href="/privacy-policy" className="underline">Privacy information</Link> · <Link href="/telehealth-consent" className="underline">Online consultation information</Link> · <Link href="/booking-cancellation" className="underline">Booking and cancellation information</Link></p>
       </div>
     </div>
   );

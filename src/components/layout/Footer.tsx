@@ -3,11 +3,11 @@ import { Leaf } from "lucide-react";
 import { navItems, siteConfig } from "@/lib/siteConfig";
 
 const legalLinks = [
-  { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms of Use", href: "/terms" },
-  { label: "Health Disclaimer", href: "/health-disclaimer" },
-  { label: "Booking & Cancellation Policy", href: "/booking-cancellation" },
-  { label: "Telehealth Consent", href: "/telehealth-consent" },
+  { label: "Privacy information", href: "/privacy-policy" },
+  { label: "Website information", href: "/terms" },
+  { label: "Health information", href: "/health-disclaimer" },
+  { label: "Appointments and changes", href: "/booking-cancellation" },
+  { label: "Online consultations", href: "/telehealth-consent" },
 ];
 
 export function Footer() {
@@ -29,12 +29,13 @@ export function Footer() {
             Homoeopathy Speaks supports integration with modern medical care and appropriate
             allied health support.
           </p>
+          <p className="mt-4 text-sm leading-7 text-slate-400">{siteConfig.practitioner} · {siteConfig.registration}<br />{siteConfig.location}<br /><a href={siteConfig.phoneHref} className="underline">{siteConfig.phone}</a><br /><a href={`mailto:${siteConfig.email}`} className="break-words underline">{siteConfig.email}</a></p>
         </div>
 
         <div>
           <h4 className="font-semibold">Pages</h4>
           <div className="mt-4 grid gap-2 text-sm text-slate-400">
-            {navItems.slice(0, 6).map((item) => (
+            {navItems.map((item) => (
               <Link key={item.href} href={item.href} className="hover:text-white">
                 {item.label}
               </Link>
@@ -43,7 +44,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="font-semibold">Legal</h4>
+          <h4 className="font-semibold">Practice information</h4>
           <div className="mt-4 grid gap-2 text-sm text-slate-400">
             {legalLinks.map((item) => (
               <Link key={item.href} href={item.href} className="hover:text-white">
@@ -55,8 +56,8 @@ export function Footer() {
       </div>
 
       <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-xs leading-5 text-slate-500">
-        © {new Date().getFullYear()} Homoeopathy Speaks. Website copy should be reviewed before
-        publication. For emergencies, call 000.
+        © {new Date().getFullYear()} Homoeopathy Speaks. In an emergency in Australia call 000;
+        overseas, contact local emergency services.
       </div>
     </footer>
   );

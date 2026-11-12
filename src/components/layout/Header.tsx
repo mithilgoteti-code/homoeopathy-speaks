@@ -6,7 +6,7 @@ import { Leaf, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { navItems } from "@/lib/siteConfig";
 
-export function Header() {
+export function Header({ bookingsOpen = false }: { bookingsOpen?: boolean }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -27,13 +27,14 @@ export function Header() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-1 xl:flex">
           {navItems.map((item) => {
             const active = pathname === item.href;
             return (
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={active ? "page" : undefined}
                 className={
                   active
                     ? "rounded-full bg-teal-700 px-4 py-2 text-sm font-medium text-white shadow-sm"
@@ -48,22 +49,26 @@ export function Header() {
 
         <Link
           href="/book-appointment"
-          className="hidden rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-teal-800 lg:inline-flex"
+          className="hidden rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-teal-800 xl:inline-flex"
         >
-          Book Now
+          {bookingsOpen ? "Book now" : "Consultations & fees"}
         </Link>
 
         <button
-          className="rounded-xl p-2 text-slate-700 lg:hidden"
+          className="rounded-xl p-3 text-slate-700 xl:hidden"
           onClick={() => setOpen((value) => !value)}
+          id="mobile-menu-toggle"
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
+          onKeyDown={(event) => { if (event.key === "Escape") setOpen(false); }}
         >
           {open ? <X /> : <Menu />}
         </button>
       </div>
 
       {open ? (
-        <div className="border-t border-slate-200 bg-white px-4 pb-4 lg:hidden">
+        <nav id="mobile-navigation" aria-label="Mobile navigation" onKeyDown={(event) => { if (event.key === "Escape") { setOpen(false); document.getElementById("mobile-menu-toggle")?.focus(); } }} className="border-t border-slate-200 bg-white px-4 pb-4 xl:hidden">
           <div className="grid gap-2 pt-3">
             {navItems.map((item) => {
               const active = pathname === item.href;
@@ -71,6 +76,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  aria-current={active ? "page" : undefined}
                   onClick={() => setOpen(false)}
                   className={
                     active
@@ -83,7 +89,7 @@ export function Header() {
               );
             })}
           </div>
-        </div>
+        </nav>
       ) : null}
     </header>
   );

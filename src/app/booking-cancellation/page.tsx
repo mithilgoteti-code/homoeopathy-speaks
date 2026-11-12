@@ -1,26 +1,19 @@
 import type { Metadata } from "next";
-import { SectionHeading } from "@/components/common/SectionHeading";
+import { HoldingInformation } from "@/components/common/HoldingInformation";
+import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Booking & Cancellation Policy",
-  description: "Draft booking and cancellation policy for Homoeopathy Speaks.",
+  title: "Appointments and Changes",
+  description: "Appointment enquiries, payment timing and how to contact Homoeopathy Speaks about a change.",
 };
-
 export default function BookingCancellationPage() {
-  return (
-    <section className="bg-[#fbfaf6] px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-3xl rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-100">
-        <SectionHeading eyebrow="Legal" title="Booking & Cancellation Policy" align="left" />
-        <div className="prose-safe mt-8">
-          <p><strong>Draft template:</strong> Final cancellation times, deposits and refund terms should be confirmed before launch.</p>
-          <h2>Booking confirmation</h2>
-          <p>Appointments are confirmed once the practice accepts the booking request or the online booking system confirms the appointment.</p>
-          <h2>Cancellations and rescheduling</h2>
-          <p>Please provide adequate notice if you need to cancel or reschedule. Cancellation fees may apply depending on the final practice policy.</p>
-          <h2>Late arrivals</h2>
-          <p>Late arrival may reduce consultation time. The full consultation fee may still apply.</p>
-        </div>
-      </div>
-    </section>
-  );
+  return <HoldingInformation title="Appointments and changes" intro="Contact the practice to discuss appointments while online booking is being prepared.">
+    <h2>Appointment enquiries</h2>
+    <p>Call <a href={siteConfig.phoneHref}>{siteConfig.phone}</a> or email <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>. An enquiry or a visit to this website does not reserve an appointment. The practice will confirm any appointment separately.</p>
+    <h2>Payment and forms</h2>
+    <p>Payment is collected only after consultation. There are no booking deposits or compulsory card capture. Prescribed remedies are charged separately. Intake forms are offered after booking, with paper alternatives available at the clinic.</p>
+    <h2>Cancellations, rescheduling and late arrivals</h2>
+    <p>Contact the practice as soon as possible if you need to cancel, reschedule or advise that you are running late. Wait for the practice to confirm any requested change. Patient self-service changes are not currently offered through this website.</p>
+    <p>No cancellation or rescheduling fee is introduced by this temporary website. The full booking and cancellation arrangements will be communicated before online bookings open.</p>
+  </HoldingInformation>;
 }

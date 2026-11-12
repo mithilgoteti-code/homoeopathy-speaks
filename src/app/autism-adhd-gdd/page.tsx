@@ -7,9 +7,9 @@ import { DisclaimerBox } from "@/components/common/DisclaimerBox";
 import { SectionHeading } from "@/components/common/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Autism, ADHD & GDD Support",
+  title: "Consultation information for families",
   description:
-    "Individualised homoeopathic consultations for families seeking complementary support for Autism, ADHD and Global Developmental Delay alongside appropriate medical and allied health care.",
+    "Information for families considering a homoeopathic consultation, including limits of the service and the importance of appropriate medical and allied health care.",
 };
 
 export default function NeuroPage() {
@@ -19,8 +19,8 @@ export default function NeuroPage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Children and families"
-            title="Autism, ADHD & Developmental Support"
-            text="Individualised homoeopathic consultations for families seeking complementary support alongside paediatric, allied health, behavioural, educational and conventional medical care."
+            title="Consultation information for children and families"
+            text="Information for families considering a complementary consultation. Developmental concerns require appropriate assessment and care from qualified professionals."
           />
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
@@ -34,24 +34,16 @@ export default function NeuroPage() {
               </p>
               <p className="mt-4 leading-8 text-slate-700">
                 At Homoeopathy Speaks, consultations are designed to understand the child as a whole.
-                Dr Kumar Goteti uses detailed case-taking to assess the child’s physical, emotional,
+                Mr Kumar Goteti uses detailed case-taking to discuss the child’s physical, emotional,
                 behavioural, developmental and family context before selecting an individualised
                 homoeopathic remedy.
               </p>
             </div>
 
             <div className="rounded-3xl bg-teal-900 p-8 text-white shadow-sm">
-              <h2 className="text-2xl font-semibold">Dr Kumar’s focused work since 2010</h2>
-              <p className="mt-4 leading-8 text-teal-50/90">
-                For over 15 years, Dr Kumar Goteti has maintained a focused clinical and research
-                interest in supporting children and families affected by Autism Spectrum Disorder,
-                ADHD and Global Developmental Delay.
-              </p>
-              <p className="mt-4 leading-8 text-teal-50/90">
-                His work has centred on individualised homoeopathic case-taking, long-term follow-up,
-                family-centred care and observing changes across attention, emotional regulation,
-                learning progress, social engagement, sleep and general wellbeing.
-              </p>
+              <h2 className="text-2xl font-semibold">Scope and limitations</h2>
+              <p className="mt-4 leading-8 text-teal-50/90">Mr Kumar Goteti provides homoeopathic consultations. These consultations do not diagnose or assess autism, ADHD or developmental delay, and no developmental or symptom improvement is promised.</p>
+              <p className="mt-4 leading-8 text-teal-50/90">Parents should continue paediatric, allied health, behavioural, educational and medical care. Questions about diagnosis or established treatment should be directed to the appropriate qualified professional.</p>
             </div>
           </div>
 
@@ -63,8 +55,8 @@ export default function NeuroPage() {
             />
             <InfoCard
               icon={Brain}
-              title="Individualised remedy selection"
-              text="Remedies are selected based on the child’s total symptom picture rather than diagnosis alone."
+              title="Care history and preferences"
+              text="The consultation discusses relevant history, existing treatments and care priorities without replacing a diagnostic assessment."
             />
             <InfoCard
               icon={Stethoscope}
@@ -76,10 +68,10 @@ export default function NeuroPage() {
           <div className="mt-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <DisclaimerBox />
             <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-100">
-              <h2 className="text-2xl font-semibold text-slate-950">Book a neurodevelopmental consultation</h2>
+              <h2 className="text-2xl font-semibold text-slate-950">Review extended consultation options</h2>
               <p className="mt-3 leading-8 text-slate-700">
-                Choose the Autism / ADHD / GDD consultation option on the booking page. Families may
-                be asked to complete a secure intake form before the appointment.
+                Review extended consultation options if more time is needed. Intake forms
+                are offered after booking, with paper alternatives at the clinic.
               </p>
               <ul className="mt-5 grid gap-3 text-sm leading-6 text-slate-700">
                 {[
@@ -95,7 +87,7 @@ export default function NeuroPage() {
                 ))}
               </ul>
               <Link href="/book-appointment" className="mt-6 inline-flex rounded-full bg-teal-700 px-6 py-4 font-semibold text-white hover:bg-teal-800">
-                Book Appointment
+                View consultations and fees
               </Link>
             </div>
           </div>

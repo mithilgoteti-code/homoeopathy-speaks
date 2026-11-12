@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:holding": "node scripts/build-holding.mjs",
+    "check:holding": "node scripts/check-holding-export.mjs",
     "start": "next start",
     "lint": "eslint"
   },

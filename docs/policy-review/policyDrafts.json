@@ -1,0 +1,171 @@
+{
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "Homoeopathy Speaks provides homoeopathic consultations with Mr Kumar Goteti, registered with the Australian Register of Homoeopaths (AROH-11-153). This policy explains how personal information is handled in enquiries, appointments, care and practice administration.",
+    "approvals": [
+      "Effective date: insert the approved publication date. This draft has not been published.",
+      "Confirm Mr Kumar Goteti as the person responsible for privacy enquiries and ongoing monitoring of the Gmail contact. Inbox access is confirmed by the practice; delivery and reply routing have not been tested.",
+      "Complete the marked security, overseas-handling and retention decisions. Approve and implement the guardian, consent and emergency procedures before relying on this wording.",
+      "Approve Halaxy Telehealth and its applicable information handling before replacing the marked video clause. Obtain appropriate professional review, including retention and international eligibility."
+    ],
+    "sections": [
+      {
+        "heading": "Privacy contact",
+        "paragraphs": [
+          "For privacy questions, access or correction requests and complaints, contact Mr Kumar Goteti at homoeopathyspeaks@gmail.com or on 0413 259 078. You may also write to Homoeopathy Speaks, 2A Mapleton Street, Stirling WA 6021, Australia. Please call first to arrange a suitable way to provide sensitive information. Avoid sending detailed health information through ordinary email."
+        ]
+      },
+      {
+        "heading": "Information we collect and why",
+        "paragraphs": [
+          "We collect information reasonably necessary to arrange appointments, provide agreed services, keep care records, communicate with you and administer invoices and payments. This may include your name, contact details, date of birth, relevant health history, medicines, allergies, existing reports, consultation notes and correspondence. Online care also requires your time zone, current physical location and callback arrangements. Where relevant, we need a representative’s identity, relationship and authority, and an emergency contact.",
+          "We usually collect information from you or an authorised representative. Information from another provider requires appropriate consent or another lawful basis. Please provide only relevant information. You may ask about anonymous or pseudonymous enquiries; identification may be necessary for safe care and accurate records. If you withhold necessary information, we will explain any limits on the service and discuss alternatives."
+        ]
+      },
+      {
+        "heading": "Consent and your choices",
+        "paragraphs": [
+          "We seek appropriate consent to collect health information unless otherwise authorised or required by law. A privacy acknowledgement is separate from informed consent to care. The practitioner will discuss the proposed service, limitations, alternatives and relevant risks and document the consent appropriate to the decision.",
+          "You may ask questions or withdraw consent for future handling where we rely on consent. This may affect the service we can provide. Withdrawal does not reverse earlier lawful handling or override record-retention obligations. Marketing consent is separate and optional."
+        ]
+      },
+      {
+        "heading": "Bookings, intake and payment",
+        "paragraphs": [
+          "Halaxy is used for appointments, intake information, clinical records and invoicing. Intake forms are offered after booking. Paper forms are available at the clinic; please contact us about another accessible arrangement. Document uploads in the intake questionnaire are disabled. Bring relevant existing reports to the clinic or have them available for discussion online. No new medical tests are required solely to complete the form.",
+          "Payment is collected after consultation. Booking does not require a deposit or compulsory card capture. Opening a website booking page does not reserve an appointment; rely on a confirmation from Halaxy or the practice."
+        ]
+      },
+      {
+        "heading": "Use and disclosure",
+        "paragraphs": [
+          "Information is handled for these purposes by authorised practice personnel and necessary service providers. We disclose relevant information to another healthcare provider with consent or another lawful basis. Other disclosures may be authorised or required by law, including in an applicable serious-threat or legal-process situation. We do not sell patient health information or use it for direct marketing without specific consent."
+        ]
+      },
+      {
+        "heading": "Website and software providers",
+        "paragraphs": [
+          "Cloudflare hosts and delivers the website. The live website uses a Cloudflare analytics beacon to measure visits and performance. Cloudflare may also process request and security information to operate its services. The prepared website has no connected enquiry or newsletter submission form. Following a Halaxy booking link takes you to a separate service with its own privacy notice.",
+          "Halaxy’s Australian privacy notice states that data is stored in Australia and describes overseas recipients and service providers. Its supplier list includes AWS for hosting, Mailchimp for email sending and Twilio for communications and telehealth. These are Halaxy suppliers, not evidence that the practice separately uses every integration. Halaxy sends practice communications through its platform; replies use the configured practice reply-to address.",
+          "The practice contact address uses Gmail, provided by Google. Ordinary email may include your address, message content and communication metadata. Google describes international processing; Australia-only email storage is not promised.",
+          "[APPROVAL — VIDEO: the proposed provider is Halaxy Telehealth. Approve its use and confirm applicable processing, support and recording/transcription arrangements before online care begins. If the purchased domain email is adopted or forwards messages, identify its verified mailbox provider, forwarding destination and applicable terms before updating this policy.]"
+        ]
+      },
+      {
+        "heading": "Overseas information handling",
+        "paragraphs": [
+          "Some software services may process information or permit support access outside Australia. Cloudflare’s published privacy policy describes global handling, with primary storage in the United States and European Economic Area. This is a general supplier statement, not a verified location for each practice website request. Halaxy identifies United States corporate locations for several suppliers; corporate location alone does not establish the country in which patient information is processed. Google describes processing on servers outside a user’s country.",
+          "[APPROVAL — COUNTRIES AND SAFEGUARDS: complete the practice-specific recipient and country list, where practicable, for Cloudflare, Halaxy communications/video and Google email. Include Microsoft/GoDaddy only to the extent verified for the domain mailbox. Review applicable contracts and safeguards and any further notice or consent needed. Do not promise that all information remains in Australia.]",
+          "A booking, privacy acknowledgement or online-care consent does not seek a blanket waiver of overseas-disclosure protections."
+        ]
+      },
+      {
+        "heading": "Security and retention",
+        "paragraphs": [
+          "Care information is held in Halaxy, with access governed by account permissions. The practice is responsible for controlling account and device access and protecting paper records and exported copies. Ordinary email and video communications carry privacy and connection risks. No system can guarantee absolute security.",
+          "[APPROVAL — CONTROLS: describe only measures actually implemented and checked for account authentication, device protection, paper storage, backup/recovery and incident response. Do not state that multi-factor authentication, encrypted devices or tested backups are in place without verification.]",
+          "Records are kept for applicable legal obligations and other permitted purposes. When no longer needed for a permitted purpose, information is securely destroyed or de-identified unless an exception requires retention. Access or deletion requests do not automatically override retention requirements. We will explain any applicable restriction.",
+          "[APPROVAL — RETENTION: approve an adult and child record-retention schedule covering the practice’s location, patients’ jurisdictions, professional and insurer requirements, complaints or legal holds, and secure disposal. No universal seven-year or age-25 rule is asserted by this draft.]"
+        ]
+      },
+      {
+        "heading": "Children, guardians and representatives",
+        "paragraphs": [
+          "The practitioner considers the patient’s capacity to understand the particular decision and involves them appropriately. Booking or paying for another person does not establish consent authority or a right to their information. Before relying on a representative’s consent or releasing information, we check identity, relationship, authority and relevant limits, including any parental-responsibility arrangements.",
+          "A parent’s access is not automatic. The patient’s capacity and confidentiality, applicable law and relevant orders must be considered. If authority or suitability cannot be established, a consultation or release of information may need to be deferred."
+        ]
+      },
+      {
+        "heading": "Online and international care",
+        "paragraphs": [
+          "Before online care, the practitioner confirms identity, physical location, callback details, participants, suitability and consent. Overseas patients must contact the practice before booking so local requirements, insurance and emergency arrangements can be checked. A working video link or booking does not establish eligibility in every country.",
+          "Recording, transcription, AI assistance and additional participants require separate discussion and appropriate consent before use. This is not an emergency service. In an emergency, contact the emergency service where you are located; in Australia call 000."
+        ]
+      },
+      {
+        "heading": "Access, correction and complaints",
+        "paragraphs": [
+          "Use the privacy contact above to request access or correction or raise a concern. We may verify identity and authority. We will consider requests within a reasonable period, explain any lawful refusal or restriction and tell you how to complain. If you disagree with a correction decision, you may ask for a statement of disagreement to be associated with the record where applicable. We will acknowledge a complaint, review the relevant facts and provide a response and escalation options.",
+          "If a privacy concern remains unresolved, you may contact the Office of the Australian Information Commissioner. Health-service complaints may also be made to the Western Australian Health and Disability Services Complaints Office (HaDSCO)."
+        ]
+      },
+      {
+        "heading": "Updates",
+        "paragraphs": [
+          "The approved policy will show its effective date and be available on request. Material changes to information handling will be reviewed and explained as appropriate."
+        ]
+      }
+    ]
+  },
+  "telehealth": {
+    "title": "Online Consultation Information and Consent",
+    "intro": "Mr Kumar Goteti, Australian Register of Homoeopaths registration AROH-11-153, provides homoeopathic consultations. These are complementary consultations and do not replace medical assessment or evidence-based treatment. Scientific evidence does not establish homoeopathy as an effective treatment for medical conditions. This document explains online-care arrangements; it is not, by itself, a record that a patient has consented.",
+    "approvals": [
+      "Effective date: insert the approved publication date. This draft has not been published.",
+      "Proposed provider: Halaxy Telehealth. Approve the four appointment-type location changes, credit use and joining-message process before use. No provider was switched by this review.",
+      "Approve privacy/security arrangements, the consent-recording procedure, guardian checks and country-specific international eligibility and emergency procedures."
+    ],
+    "sections": [
+      {
+        "heading": "Joining your appointment",
+        "paragraphs": [
+          "[APPROVAL — PROVIDER: these joining instructions assume approval of Halaxy Telehealth.] Halaxy Telehealth uses a browser video link. The practice will send your individual link with joining instructions. Keep it private and do not share it with anyone who has not been agreed as a participant. The practitioner uses a separate link. If your link is missing, call 0413 259 078 before the appointment.",
+          "Check the appointment date and time zone in Halaxy. Use a private space, reliable internet and a device with a camera and microphone. Allow camera and microphone access only when ready to join the agreed consultation. Halaxy documents Chrome, Safari and Firefox; use a current version and check your device in advance. Tell the practitioner if anyone else is present."
+        ]
+      },
+      {
+        "heading": "Suitability and consent",
+        "paragraphs": [
+          "At the start, the practitioner will confirm your identity, physical location, callback number, participants and relevant local emergency arrangements. We will explain the service, connection and privacy limitations, the limits of remote assessment, alternatives and relevant risks, and seek and document appropriate consent before care.",
+          "You may ask questions, decline online care or withdraw consent to future care. The practitioner may recommend an in-person appointment or local medical assessment if online care is unsuitable. A booking, information acknowledgement or website checkbox is not the whole informed-consent process. Continue prescribed treatment and appropriate medical, allied health and specialist care."
+        ]
+      },
+      {
+        "heading": "Privacy and other participants",
+        "paragraphs": [
+          "The video provider processes information needed to connect and operate the call. Read the practice Privacy Policy and Halaxy privacy notice. Connections, devices and other people in the room can affect confidentiality. We will agree the identity, role and confidentiality arrangements for a guardian, interpreter or support person.",
+          "Ordinary booking or online-care consent does not authorise recording, transcription or AI assistance. Any proposed use requires a separate explanation and appropriate consent before it begins. Discuss any proposed recording with the practitioner. Platform settings must be checked; availability of a feature does not mean you have consented to its use."
+        ]
+      },
+      {
+        "heading": "If the connection fails",
+        "paragraphs": [
+          "We will use the agreed callback arrangements to decide whether to reconnect, reschedule or use another suitable method with your agreement. A telephone fallback does not automatically authorise a different service. For an urgent safety concern, contact local emergency services instead of waiting for the video connection to recover."
+        ]
+      },
+      {
+        "heading": "Children and representatives",
+        "paragraphs": [
+          "Tell the practice who is booking and their relationship to the patient. The practitioner checks identity and authority, considers the patient’s capacity and confidentiality, involves them appropriately, and agrees who should attend. A family relationship, payment or booking alone does not establish consent authority or access to records. Unclear or disputed authority may require the appointment to be deferred."
+        ]
+      },
+      {
+        "heading": "Patients outside Australia",
+        "paragraphs": [
+          "Contact the practice before booking and identify the country and physical location where you will attend. The practitioner must check local requirements, insurance and suitability before accepting the consultation. Online care may be unavailable in some locations; technical access does not establish legal eligibility.",
+          "We will agree a callback number, your location and appropriate local emergency arrangements. The practitioner cannot promise direct access to emergency services in every country. This is not emergency care. Contact the emergency service where you are located; in Australia call 000."
+        ]
+      },
+      {
+        "heading": "Fees, intake and changes to appointments",
+        "paragraphs": [
+          "Consultation fees are Initial General $100 (45 minutes), General Follow-up $75 (30 minutes), Initial Extended $150 (60 minutes) and Extended Follow-up $120 (45 minutes). Payment is collected only after consultation. There is no booking deposit or compulsory card capture. Prescribed remedies are charged separately.",
+          "Intake forms are offered after booking. Paper alternatives are available at the clinic, or contact the practice about another accessible arrangement. Questionnaire document uploads are disabled. Contact 0413 259 078 promptly to cancel or reschedule; see the approved booking and cancellation information for applicable arrangements."
+        ]
+      },
+      {
+        "heading": "Acknowledgement and consent record",
+        "paragraphs": [
+          "Proposed patient acknowledgement: “I have read the online consultation information, had an opportunity to ask questions, and understand the service’s limitations, privacy arrangements and alternatives. I understand that recording, transcription and AI assistance require separate discussion and appropriate consent. I agree to the online consultation, subject to the practitioner confirming suitability and any representative’s authority.”",
+          "The practice must record the patient or authorised representative’s identity, consent method and date, authority where relevant, and the practitioner’s suitability check. This wording is prepared for approval; it has not been added as a duplicate Halaxy form or template."
+        ]
+      },
+      {
+        "heading": "Questions",
+        "paragraphs": [
+          "Call 0413 259 078 or email homoeopathyspeaks@gmail.com about arrangements. Agree a suitable way to share detailed histories or reports before sending them."
+        ]
+      }
+    ]
+  }
+}

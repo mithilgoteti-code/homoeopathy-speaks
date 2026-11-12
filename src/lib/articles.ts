@@ -24,30 +24,30 @@ export const articles = [
   },
   {
     slug: "autism-adhd-gdd-complementary-care",
-    title: "Homoeopathy, Autism, ADHD & GDD: A Complementary Care Perspective",
+    title: "Consultation Information for Children and Families",
     category: "Children & Families",
     date: "2026-05-29",
     readingTime: "5 min read",
     excerpt:
-      "How whole-person consultations can sit alongside paediatric, allied health, behavioural and educational supports.",
+      "The limits of a homoeopathic consultation and the importance of continuing appropriate established care.",
     sections: [
       {
         heading: "Understanding the child’s pattern",
         body: "Children with Autism Spectrum Disorder, ADHD or Global Developmental Delay may have unique patterns of attention, sleep, digestion, sensory preferences, emotional regulation, learning and social engagement.",
       },
       {
-        heading: "Supporting the family context",
-        body: "A detailed consultation can help understand the child’s broader context, including family routines, developmental history and support needs.",
+        heading: "Consultation limits",
+        body: "A homoeopathic consultation does not diagnose or assess autism, ADHD or developmental delay. No developmental or symptom improvement is promised.",
       },
       {
-        heading: "Integrated with other supports",
-        body: "Homoeopathic care should be integrated alongside paediatricians, GPs, psychologists, speech pathologists, occupational therapists, educators and other appropriate supports.",
+        heading: "Continue established care",
+        body: "Continue paediatric, medical, allied health, behavioural and educational support. Seek advice about diagnosis and treatment from appropriately qualified professionals.",
       },
     ],
   },
   {
     slug: "taking-homoeopathic-medicines-safely",
-    title: "How to Take Homoeopathic Medicines Safely",
+    title: "Questions About Homoeopathic Preparations",
     category: "Medicine Guide",
     date: "2026-05-29",
     readingTime: "3 min read",
@@ -60,11 +60,11 @@ export const articles = [
       },
       {
         heading: "Storage",
-        body: "Store medicines away from heat, sunlight, moisture, strong odours and children.",
+        body: "Follow the product’s labelled storage instructions and keep it out of children’s reach. Ask about ingredients and any product-specific risks; natural or diluted does not automatically mean safe.",
       },
       {
         heading: "When to seek medical care",
-        body: "If symptoms become severe, sudden or concerning, seek appropriate medical care. For emergencies, call 000.",
+        body: "If symptoms become severe, sudden or concerning, seek appropriate medical care. In an emergency in Australia call 000; overseas, contact local emergency services.",
       },
     ],
   },

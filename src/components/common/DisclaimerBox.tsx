@@ -10,7 +10,9 @@ export function DisclaimerBox() {
       Homoeopathy Speaks provides complementary homoeopathic consultations and does not replace
       medical diagnosis, emergency care, prescribed treatment, specialist care, paediatric care,
       mental health care, fertility care, antibiotics, surgery, vaccinations or allied health therapy.
-      For urgent symptoms, call 000 or attend emergency care.
+      Current scientific evidence does not establish homoeopathy as an effective treatment for
+      medical conditions. Do not delay evidence-based care. In an emergency in Australia call 000;
+      overseas, use the emergency service where you are located.
     </div>
   );
 }

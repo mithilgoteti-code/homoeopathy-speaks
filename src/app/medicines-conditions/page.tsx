@@ -7,50 +7,14 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 export const metadata: Metadata = {
   title: "Homoeopathic Medicines & Conditions",
   description:
-    "Learn about individualised homoeopathic medicine selection and complementary support for chronic wellbeing, women’s health, pain, arthritis, respiratory concerns and other conditions.",
+    "Information about consultation topics, supplied preparations and the limitations of complementary care.",
 };
 
 const groups = [
-  {
-    title: "Women’s health and fertility-related wellbeing",
-    items: [
-      "Menstrual wellbeing",
-      "Hormonal wellbeing",
-      "Fertility-related wellbeing support",
-      "Menopause-related wellbeing",
-      "General constitutional care",
-    ],
-  },
-  {
-    title: "Pain, arthritis and musculoskeletal support",
-    items: [
-      "Rheumatism",
-      "Arthritis-related wellbeing",
-      "Pain management support",
-      "Joint and muscle concerns",
-      "Mobility and constitutional support",
-    ],
-  },
-  {
-    title: "Respiratory, sinus and allergy concerns",
-    items: [
-      "Recurrent sinus concerns",
-      "Allergy-related symptoms",
-      "Respiratory wellbeing",
-      "Seasonal patterns",
-      "Immune wellbeing support",
-    ],
-  },
-  {
-    title: "Chronic and recurring concerns",
-    items: [
-      "Migraines and recurrent headaches",
-      "Digestive wellbeing",
-      "Skin concerns",
-      "Renal health concerns under medical care",
-      "Lyme disease-related wellbeing support under medical supervision",
-    ],
-  },
+  { title: "Relevant health history", items: ["Presenting concerns", "Existing medical diagnoses", "Current medical and allied health care"] },
+  { title: "Medicines and preparations", items: ["Current medications and supplements", "Allergies and previous reactions", "Ingredients and product directions"] },
+  { title: "Existing information", items: ["Relevant existing reports", "Previous treatments", "Questions for your qualified care team"] },
+  { title: "Care limitations", items: ["No disease-treatment outcomes promised", "Continue prescribed treatment", "Seek appropriate medical assessment"] },
 ];
 
 export default function MedicinesConditionsPage() {
@@ -59,7 +23,7 @@ export default function MedicinesConditionsPage() {
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
-            eyebrow="Medicines and conditions"
+            eyebrow="Consultation information"
             title="Homoeopathic medicines and whole-person care"
             text="Homoeopathic medicines are selected individually after detailed case-taking. The remedy choice is based on the person’s overall symptom picture rather than diagnosis alone."
           />
